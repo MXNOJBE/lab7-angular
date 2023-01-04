@@ -22,15 +22,17 @@
 
 <table border="1" >
 <tr>
+<th>Username</th>
 <th>UserId</th>
 <th>postId</th>
 <th>Date</th>
 <th>Time</th>
-<th>Text</th>
+<th>Comments</th>
 
 </tr>
 <tr ng-repeat="x in names | orderBy:myOrderBy">
-<td>{{x.UserId}}</td>
+<td>{{x.username}}</td>
+<td>{{x.userid}}</td>
 <td>{{x.id}}</td>
 <td>{{x.date}}</td>
 <td>{{x.time}}</td>
