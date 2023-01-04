@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html>
-<script src = "app.js"></script>    
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src = "app.js"></script>    
 <body>
 
-<p>Click the table headers to change the sorting order:</p>
+<style>
+    table{
+        width:auto;
+        height:auto;
+        background-color: blueviolet;
+        margin: auto;
+        text-align: center;
+    }
+    h1{
+       
+        text-align: center;
+    }
+</style>
+<h1> User Post Details</h1>
+<div ng-app="myApp" ng-controller="nameCtrl">
 
-<div ng-app="myApp" ng-controller="namesCtrl">
-
-<table border="1" width="100%">
+<table border="1" >
 <tr>
-<th>Name</th>
-<th >Country</th>
+<th>UserId</th>
+<th>postId</th>
+<th>Date</th>
+<th>Time</th>
+<th>Text</th>
+
 </tr>
-<tr ng-repeat="x in names">
-<td>{{x.name}}</td>
-<td>{{x.country}}</td>
+<tr ng-repeat="x in names | orderBy:myOrderBy">
+<td>{{x.UserId}}</td>
+<td>{{x.id}}</td>
+<td>{{x.date}}</td>
+<td>{{x.time}}</td>
+<td>{{x.text}}</td>
 </tr>
 </table>
 
 </div>
+
+
 </body>
 </html>

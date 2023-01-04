@@ -2,16 +2,12 @@ var app = angular.module("myApp", [])
         app.controller("nameCtrl",function ($scope) {
 
     $scope.names = [
-        {name:'Jani',country:'Norway'},
-        {name:'Carl',country:'Sweden'},
-        {name:'Margareth',country:'England'},
-        {name:'Hege',country:'Norway'},
-        {name:'Joe',country:'Denmark'},
-        {name:'Gustav',country:'Sweden'},
-        {name:'Birgit',country:'Denmark'},
-        {name:'Mary',country:'England'},
-        {name:'Kai',country:'Norway'}
-        ];
+        { userid: 1000,id: 1000, date:"30/11/2000", time:"20:30",text:"Hello connections, this is new video on Web Development"},
+        { userid: 1000,id: 1001, date: "10/11/2000", time: "1:30", text: "Hello connections, this is new video on Android Development" },
+        { userid: 1000,id: 1002, date: "7/6/2000", time: "12:00", text: "Hello connections, this is new video on Full Stack Development" },
+        { userid: 1000,id: 1003, date: "12/5/2000", time: "9:45", text: "Hello connections, this is new video on Software Enginnering" },
+        { userid: 1000,id: 1004, date: "2/2/2000", time: "18:05", text: "Hello connections, this is new video on Microprocessor" },
+    ];
 
         $scope.orderByMe = function(x) {
         $scope.myOrderBy = x; 
